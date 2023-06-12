@@ -2,7 +2,7 @@
 A Chrome Extension that lets you Get stats of any website you want.
 
 # Preview / Run / View  : <a href="https://sohamkore.github.io/Website-Stats/">Project</a>
-it wont work on github to run you might wanna:
+it wont work on github. to run you might wanna:
 - Download the project
 - rename the index.html to popup.html
 - open browser and open "edge://extensions/" or "chrome://extensions/"  And enable devloper mode from left column
