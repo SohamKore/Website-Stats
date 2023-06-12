@@ -1,5 +1,5 @@
 # Website-Stats
-A Chrome Extension that lets you Get stats of any website you want.
+A Chrome Extension that shows stats of open website you want.
 
 # Preview / Run / View  : <a href="https://sohamkore.github.io/Website-Stats/">Project</a>
 it wont work on github. to run you might wanna:
