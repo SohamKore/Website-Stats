@@ -2,6 +2,13 @@
 A Chrome Extension that lets you Get stats of any website you want.
 
 # Preview / Run / View  : <a href="https://sohamkore.github.io/Website-Stats/">Project</a>
+it wont work on github to run you might wanna:
+- Download the project
+- rename the index.html to popup.html
+- open browser and open "edge://extensions/" or "chrome://extensions/"  And enable devloper mode from left column
+- Click 'Load unpacked' Button(its next to 'installed extensions' text)
+- select the folder which contains the files
+- Done! Click on Extension button and Launch "Website Stats" Extension.
 
 # Screenshots
 ![Website Stats Search](https://github.com/SohamKore/Website-Stats/assets/119067189/3d9f0c3b-f038-48df-9273-bea6d9b22b0b)
