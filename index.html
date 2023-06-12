@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+
+  <title>Website Stats</title>
+  <style>
+    *{
+        font-family: 'Montserrat', sans-serif;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    min-width: 30rem;
+    min-height: 50rem;
+  
+}
+    h1 {
+      font-size: 18px;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+    .wa-overview__column.wa-overview__column--ranking, .engagement-list, .wa-overview__column.wa-overview__column--company {
+    box-shadow: 10px 10px 20px #00000040;
+    border-radius: 25px;
+    border: 2px solid #80808059;
+    padding: 10px;
+    margin:10px;
+    }
+    .wa-rank-list__title, .wa-rank-list__value, .engagement-list__item-name, .engagement-list__item-value{
+        font-weight: 800;
+    }
+    .wa-overview__ga-pop-up, .app-watermark.app-watermark--primary, .app-company-info__user-feedback-button, .wa-overview__ga-cta{
+        display: none;
+    }
+    #urlForm{
+    display: flex;
+    justify-content: center;
+    border: 1px dashed gray;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+}
+#urlInput {
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #65656552;
+    FONT-WEIGHT: 500;
+    width: 50%;
+    text-align: center;
+    box-shadow: 5px 5px 15px #80808080;
+    resize: both;
+}
+form#urlForm button[type="submit"] {
+    margin: 10px;
+    background-color: #f7f7f7;
+    font-weight: 600;
+    box-shadow: 3px 3px 10px #80808078;
+    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+    color: black;
+    border: 2px solid #80808063;
+}
+.wa-overview__column.wa-overview__column--content{
+display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+svg{
+ 
+    margin: 0px 5px 0px 0px;
+
+}
+hr{
+    width: 90%;
+    border: 2px solid rgba(128, 128, 128, 0.344);
+    border-radius: 100px;
+    margin: 5px 0px 5px 0px;
+
+}
+
+.notLoading {
+    font-weight: 700;
+    margin: 5px;
+}
+    #captchaFrame {
+    border: 2px solid blue;
+    width: 100%;
+    height: 60VH;
+    box-shadow: 15px 15px 20px rgba(116, 202, 255, 0.41);
+    border-radius: 25px;
+}
+    
+  </style>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <h1>Website Stats</h1>
+  <form id="urlForm">
+    <label for="urlInput">Website URL:</label>
+    <input type="text" id="urlInput" placeholder="Enter URL">
+    <button type="submit">Get Stats</button>
+    <hr>
+<a id="notLoadingLink" class="notLoading">Click here if stats or Captcha is not loading</a>
+  </form>
+  <iframe id="captchaFrame"></iframe>
+  <div id="statsContainer"></div>
+
+</body>
+</html>
