@@ -1,7 +1,7 @@
 # Website-Stats
 A Chrome Extension that lets you Get stats of any website you want.
 
-Preview / Run : <a href="https://sohamkore.github.io/Website-Stats/">Project</a>
+# Preview / Run / View  : <a href="https://sohamkore.github.io/Website-Stats/">Project</a>
 
 # Screenshots
 ![Website Stats Search](https://github.com/SohamKore/Website-Stats/assets/119067189/3d9f0c3b-f038-48df-9273-bea6d9b22b0b)
