@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="style.css">
+  <title>Website Stats</title>
+  <script src="popup.js"></script>
+  <style>
+    .donateBtn{
+      animation: shake .5s  infinite;
+    }
+  </style>
+</head>
+<body>
+    <div class="ring"></div>
+    <div class="topRow">
+        <h1>Website Stats</h1>
+       <p class="donateBtn"> Donate</p>
+    </div>
+    <div class="topBox">
+    <div class="limitBox">
+        <label>You have <span class="dailyCount">5</span> searches remaining for today</label>
+    </div>
+    <div class="premiumBox">
+        <label class="premiumTxt">Subscribe to premium for only $10 <span class="StrikeText">$25</span> to get stats of unlimited websites a day</label>
+        <button id="buyPremiumBtn">Get Premium</button>
+    </div>
+    </div>
+  
+  <form id="urlForm">
+    <label class="labelSearch" for="urlInput">Website URL:</label>
+    <input type="text" id="urlInput" placeholder="Enter URL">
+    <button type="submit">Get Stats</button>
+
+
+    <hr>
+<a id="notLoadingLink" class="notLoading">Click here if stats or Captcha is not loading</a>
+  </form>
+  <div id="statsContainer"></div>
+  <iframe id="captchaFrame" sandbox="allow-scripts"></iframe>
+
+
+
+</body>
+</html>
