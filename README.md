@@ -1,3 +1,8 @@
+
+![7ae387e5-21fc-4e21-8125-45c8897ec926](https://github.com/SohamKore/Website-Stats-Extension/assets/119067189/e26a2764-7958-4864-a6a6-4c5e105c6b9a)
+
+![ea40c697-2038-4760-8898-19ba957111ee](https://github.com/SohamKore/Website-Stats-Extension/assets/119067189/86127f85-6e01-446e-ad7d-346e55b83822)
+
 # A Chrome Extension that shows stats of open website you want.
 
 # Preview / Run / View  : <a href="https://sohamkore.github.io/Website-Stats-Extension/">Run Project</a>
@@ -8,6 +13,9 @@ it wont work on github. to run you might wanna:
 - Click 'Load unpacked' Button(its next to 'installed extensions' text)
 - select the folder which contains the files
 - Done! Click on Extension button and Launch "Website Stats" Extension.
+![dc06f0e9-f4e1-43e4-b37b-f794e22919f3](https://github.com/SohamKore/Website-Stats-Extension/assets/119067189/1bf10811-84ab-45c6-97d9-51dbc077b835)
+
+
 ![FB70Sp6sCZ](https://github.com/SohamKore/Website-Stats-Extension/assets/119067189/9703255c-c1ab-4ae8-a8de-58498ff1c3b5)
 
 # Screenshots
