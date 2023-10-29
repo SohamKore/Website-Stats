@@ -13,10 +13,7 @@ it wont work on github. to run you might wanna:
 - Click 'Load unpacked' Button(its next to 'installed extensions' text)
 - select the folder which contains the files
 - Done! Click on Extension button and Launch "Website Stats" Extension.
-![dc06f0e9-f4e1-43e4-b37b-f794e22919f3](https://github.com/SohamKore/Website-Stats-Extension/assets/119067189/1bf10811-84ab-45c6-97d9-51dbc077b835)
-
-
-![FB70Sp6sCZ](https://github.com/SohamKore/Website-Stats-Extension/assets/119067189/9703255c-c1ab-4ae8-a8de-58498ff1c3b5)
+![Screenshot 2023-10-29 194554](https://github.com/SohamKore/Website-Stats-Extension/assets/119067189/12a22af1-3cef-4e12-b4f1-dda7aed6ec70)
 
 # Screenshots
 ![Website Stats Search](https://github.com/SohamKore/Website-Stats/assets/119067189/3d9f0c3b-f038-48df-9273-bea6d9b22b0b)
