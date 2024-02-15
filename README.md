@@ -4,7 +4,7 @@
 ![ea40c697-2038-4760-8898-19ba957111ee](https://github.com/SohamKore/Website-Stats-Extension/assets/119067189/86127f85-6e01-446e-ad7d-346e55b83822)
 
 # A Chrome Extension that shows stats of open website you want.
-
+# The Exxtension wont perform its functions in website view but you can still view its design.
 # Preview / Run / View  : <a href="https://sohamkore.github.io/Website-Stats-Extension/">Run Project</a>
 it wont work on github. to run you might wanna:
 - Download the project
