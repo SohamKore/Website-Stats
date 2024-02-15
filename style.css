@@ -1,14 +1,115 @@
-@keyframes shake {
-    0% {
-        transform: rotate(-5deg);
-        color: blue;
-    }
-    100% {
-        /* transform: rotateY(90deg); */
-        color: red;
-        transform: rotate(5deg);
-    }
+.premiumSettings{
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
+.premiumSettings:hover{
+  transform: scale(1.05);
+}
+#restoreSubscription{
+  text-decoration: none;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.premiumStatus{
+  display: none;
+}
+#timer{
+  text-align: center;
+
+  color: red;
+  font-weight: 700;
+  font-size: large;
+  margin-bottom: 10px;
+  display: none;
+}
+.logo {
+  width: 35%;
+  transition: .2s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+#statsContainer{
+  min-height: 30px;
+  font-weight: 700;
+  width: 100%;
+  font-size: larger;
+  text-align: center;
+}
+.donateCol{
+
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  }
+  h5{
+    padding: 0;
+  margin: 0;
+  }
+  i{
+    font-size: xx-large;
+  margin: 0;
+  padding: 0;
+  }
+  
+  .donateBtn{
+    z-index: 1;
+    color: white;
+  text-decoration: none;
+  border:2px solid rgb(255 255 255 / 42%);
+  padding: 3px;
+  /* background-image: linear-gradient(69deg, black, dimgrey); */
+  /* background-color: black; */
+  text-shadow: 0px 0px 10px #ffffff91;
+  border-radius: 10px;
+  transition: none;
+  transition: .2s;
+  }
+  
+  .donateBtn:hover{
+    /* transition: 0s; */
+    background-image: none;
+    transform: scale(1.1);
+    color: black;
+  border: none;
+  background-color: white;
+  box-shadow: 0px 0px 15px white;
+  }
+  .donateBtn:active{
+    background-image: none;
+    transform: scale(1.1);
+    color: black;
+  border: 2px solid #001c31;
+  background-color: white;
+  box-shadow: 0px 0px 25px white;
+  }
+.timer {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+#notLoadingLink{
+    text-align: center;
+    padding: 3px 15px;
+    width: 90%;
+    font-weight: 800;
+    font-size: large;
+    color: blue;
+    border-radius: 10px;
+    text-decoration: underline;
+    transition: .2s ease-in-out;
+    text-decoration: underline !important;
+}
+#notLoadingLink:hover {
+    color: #555;
+    transform: scale(1.05);
+    text-decoration: underline !important;
+}
+
 .dailyCount{
     color: red;
     font-size: x-large;
@@ -50,6 +151,7 @@
     flex-direction: column;
     padding: 5px;
 }
+
 .premiumBox{
     justify-content: center;
     align-items: center;
@@ -68,7 +170,6 @@
     border: 2px solid rgba(128, 128, 128, 0.414);
     border-radius: 100px;
     z-index: -1;
-    animation: shake .5s  infinite;
 }
 /* animation: scrollTestimonials 15s linear infinite; */
 
@@ -110,14 +211,18 @@ margin:10px;
 #urlForm{
 display: flex;
 justify-content: center;
-border: 3px dashed white;
-background-color: rgb(175, 255, 190);
+border: 4px dashed #f1f1f1;
+background-color: #95c8ff;
 align-items: center;
 margin: 10px;
 padding: 10px;
+transition: .2s ease-in-out;
 flex-direction: column;
-
 }
+#urlForm:hover{
+  background-color: #52a5ff;
+  border: 5px dashed #f1f1f1;
+  }
 #urlInput {
 
 padding: 5px;
@@ -134,19 +239,25 @@ margin-bottom: 5px;
 form#urlForm button[type="submit"] {
 background-color: white;
 font-weight: 600;
-box-shadow: none;
 border-radius: 10px;
 padding: 3px 10px 3px 10px;
-color: black;
-border: 2px solid #80808063;
+color: #007bff;
+box-shadow: 4px 4px 0px #007bff;
+border: 2px solid #007bff;
+
+transition: 0.2s ease-in-out;
+
 }
 form#urlForm button[type="submit"]:hover {
     color: white;
-    background-color: black;
+    background-color: #007bff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.404);
     }
     form#urlForm button[type="submit"]:active {
         color: black;
         background-color: white;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.404);
+
         }
 .wa-overview__column.wa-overview__column--content{
 display: flex;
@@ -161,7 +272,7 @@ margin: 0px 5px 0px 0px;
 
 }
 hr{
-width: 90%;
+width: 100%;
 border: 2px solid rgba(128, 128, 128, 0.344);
 border-radius: 100px;
 margin: 5px 0px 5px 0px;
