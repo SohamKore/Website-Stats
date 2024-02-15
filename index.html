@@ -2,52 +2,268 @@
 <html>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Website Stats</title>
+    <script src="ExtPay.js"></script>
+    <script src="popup.js"></script>
 
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
-  <title>Website Stats</title>
-  <script src="popup.js"></script>
-  <style>
-    .donateBtn{
-      animation: shake .5s  infinite;
-    }
-  </style>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 5px 20px;
+        }
+        .logo {
+            width: 25vh;
+    height: auto;
+        }
+        .topRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .donateBtn {
+            text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 4px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+        }
+        .donateBtn:hover {
+            background-color: #ffffe9;
+        }
+        .donateCol {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .premiumStatus {
+    background-color: #ffffff;
+    display: flex;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+        .premiumStatus h2 {
+            font-weight: 600;
+    margin: 0;
+    padding: 3px 6px;
+    text-align: center;
+
+        }
+        .premiumStatus .lime {
+            color: #00ff59;
+            text-shadow: 0px 0px 15px rgba(0, 255, 0, 0.598);
+        }
+        .premiumSettings {
+            margin-top: 5px;
+    text-align: center;
+    display: flex;
+    color: #888888;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    flex-wrap: nowrap;
+        }
+        .limitBox {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 7px;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .limitBox label {
+            display: block;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .limitBox .dailyCount {
+            font-weight: 600;
+            color: #007bff;
+        }
+        .limitBox #timer {
+            font-weight: 600;
+        }
+        .premiumBox {
+             background-color: #ffffff; 
+            border: 2px solid #6f6f6f3b;
+            padding: 10px;
+            border-radius: 7px;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .premiumBox .premiumTxt {
+            display: block;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+        .premiumBox .StrikeText {
+            text-decoration: line-through;
+            color: #888888;
+        }
+        .premiumBox #buyPremiumBtn {
+            display: block;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .premiumBox #buyPremiumBtn:hover {
+            background-color: #00294E;
+        }
+        .premiumBox #restoreSubscription {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .premiumBox #restoreSubscription:hover {
+            text-decoration: underline;
+        }
+        .labelSearch {
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+        #urlInput {
+            display: block;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+        }
+        #urlInput:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        #urlInput::placeholder {
+            color: #888888;
+        }
+        #urlForm button[type="submit"] {
+            background-color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+    color: #007bff;
+    box-shadow: 4px 4px 0px #007bff;
+    border: 2px solid #007bff;
+        }
+        #urlForm button[type="submit"]:hover {
+            background-color: #00294E;
+        }
+        hr {
+            border: none;
+    border-top: 2px solid #dddddd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+        }
+        .notLoading {
+            display: block;
+            text-align: center;
+            color: #007bff !important;
+            text-decoration: none !important;
+            margin-bottom: 20px;
+        }
+        .notLoading:hover {
+            text-decoration: underline;
+        }
+        .wa-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+        }
+        .row-top{
+            display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+        }
+        #gear{
+            color: #007bff;
+    margin-right: 3px;
+    font-size: large;
+    text-decoration: none;
+        }
+        dd{
+            margin: 0 !important;
+        }
+        .footer{
+    /* width: 100vw; */
+    background-color: #007bff;
+    padding: 10px;
+    color: white;
+        }
+    </style>
 </head>
 <body>
-    <div class="ring"></div>
+
+<div class="container">
     <div class="topRow">
-        <h1>Website Stats</h1>
-       <p class="donateBtn"> Buy me a Coffee</p>
+        <img class="logo" src="logo-row.png" alt="WEBSITE STATS" title="Stat Visor: Get stats and insight of websites.">
+        <a class="donateBtn" href="#" title="Donate and support the creator."> 
+            <div class="donateCol" user>
+                <i class="fas fa-coffee"></i>
+                <h5>Donate</h5>
+            </div>
+        </a>
     </div>
-    <div class="topBox">
+    <hr>
+    <div class="premiumStatus">
+        <h2>Premium Status: <span class="lime"> Basic (No premium)</span></h2>
+       <div class="row-top" style="display: flex;">
+        <h4 class="premiumSettings">        <i id="gear" class="fa fa-cog" aria-hidden="true"></i>
+            <span style="text-decoration: underline;">View your plan settings here</span></h4>
+
+       </div>
+    </div>
     <div class="limitBox">
         <label>You have <span class="dailyCount">5</span> searches remaining for today</label>
+        <label>Next request available after 12 AM <br> <span id="timer">12:00:00</span></label>
     </div>
     <div class="premiumBox">
-        <label class="premiumTxt">Subscribe to premium for only $10 <span class="StrikeText">$25</span> to get stats of unlimited websites a day</label>
+        <label class="premiumTxt">Subscribe to premium for only $9 <span class="StrikeText">$25</span> to get stats of unlimited websites a day</label>
         <button id="buyPremiumBtn">Get Premium</button>
+        <a href="#" id="restoreSubscription">Already have a paid subscription? <span style="text-decoration: underline;">Restore here.</span></a>
     </div>
-    </div>
-  
-  <form id="urlForm">
-    <label class="labelSearch" for="urlInput">Website URL:</label>
-    <input type="text" id="urlInput" placeholder="Enter URL">
-    <button type="submit">Get Stats</button>
-
-
+    <form id="urlForm">
+        <label class="labelSearch" for="urlInput">Website URL:</label>
+        <input type="text" id="urlInput" placeholder="Enter URL">
+        <button type="submit">Get Stats</button>
+    </form>
     <hr>
-<a id="notLoadingLink" class="notLoading">Click here if stats or Captcha is not loading</a>
-  </form>
-  <div id="statsContainer"></div>
-  <iframe id="captchaFrame" sandbox="allow-scripts"></iframe>
+    <div style="min-height: 30px; width: 100%;" id="statsContainer"></div>
+    <a id="notLoadingLink" class="notLoading">Click here if stats or Captcha are not loading</a>
+</div>
 
-
-
+<div class="footer">
+© 2023 SXHAM APPS. All rights reserved.
+</div>
 </body>
 </html>
